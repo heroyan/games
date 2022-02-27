@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数字华容道</title>
+    <style>
+        #container {
+            margin: auto;
+            width: 800px;
+        }
+        #huarongdao {
+            margin: auto;
+            width: 800px;
+            height: 800px;
+        }
+        .btn-area {
+            margin: auto;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .one {
+            float: left;
+            width: 90px;
+            height: 90px;
+            border: 1px brown solid;
+            margin: 10px;
+            text-align: center;
+            background: beige;
+            border-radius: 10px;
+            line-height: 90px;
+            font-size: 40px;
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="btn-area">
+            <input type="button" value="3*3格" onclick="genTable(3)"/>
+            <input type="button" value="4*4格" onclick="genTable(4)"/>
+            <input type="button" value="5*5格" onclick="genTable(5)"/>
+            <input type="button" value="6*6格" onclick="genTable(6)"/>
+            <input type="button" value="7*7格" onclick="genTable(7)"/>
+            <input type="button" value="8*8格" onclick="genTable(8)"/>
+            <input type="button" value="9*9格" onclick="genTable(9)"/>
+        </div>
+
+        <div id="huarongdao">
+        </div>
+    </div>
+
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
