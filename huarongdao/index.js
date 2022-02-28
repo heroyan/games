@@ -25,7 +25,7 @@ function genTable(num) {
     emptyY = num - 1
     global_x = emptyX
     global_y = emptyY
-    arr = randMove(arr, emptyX, emptyY, 1000)
+    arr = randMove(arr, emptyX, emptyY, 10000)
     global_arr = arr
     console.log(arr)
     // 开始移动
@@ -41,7 +41,7 @@ function genTable(num) {
     global_start = new Date()
 }
 
-// 随机移动
+// 随机移动， 从目标位置开始随机打乱
 function randMove(arr, emptyX, emptyY, moveTimes) {
     num = arr.length
     offset = [[-1, 0], [1, 0], [0, 1], [0, -1]]
@@ -163,3 +163,6 @@ function isFinished() {
 
     return true
 }
+
+// 默认展示 4*4 格
+genTable(4)
