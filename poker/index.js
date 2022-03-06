@@ -48,25 +48,12 @@ $(document).ready(function () {
     }
 
     const updateLeftNum = (num) => {
-        $(".left-num-display[data-val=" + num + "]").html(pokerLeft[num])
+        $(".card[data-val=" + num + "]").find(".left-num").html(pokerLeft[num])
     }
 
     const initLeftNum = () => {
-        $("#card-list").html("")
-        $("#card-left-num").html("")
         for(let i = 1; i < 16; i++) {
-//            $(".card[data-val=" + i + "]").find(".left-num").html(pokerLeft[i])
-            let display = pokerArr[i] || i
-
-            let one = $('<span class="card-display"></span>')
-            one.attr("data-val", i)
-            one.html(display)
-            $("#card-list").append(one)
-
-            one = $('<span class="left-num-display"></span>')
-            one.attr("data-val", i)
-            one.html(pokerLeft[i])
-            $("#card-left-num").append(one)
+            $(".card[data-val=" + i + "]").find(".left-num").html(pokerLeft[i])
         }
     }
 
