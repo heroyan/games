@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>舒尔特方格</title>
+    <style>
+        html {
+            background: linear-gradient(to bottom, #99c1ad91 0%,#88e794 100%);
+        }
+        .container {
+            width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+        .btn {
+            height: 50px;
+        }
+        table {
+            margin: auto;
+        }
+        td {
+            border: 1px solid green;
+            width: 80px;
+            height: 80px;
+            text-align: center;
+        }
+        .time-used {
+            margin: 10px;
+        }
+        .time {
+            display: inline-block;
+            width: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <input type="button" class="btn" data-val="4" value="4*4 格" />
+        <input type="button" class="btn" data-val="5" value="5*5 格" />
+        <input type="button" class="btn" data-val="6" value="6*6 格" />
+        <input type="button" class="btn" data-val="7" value="7*7 格" />
+        <input type="button" class="btn" data-val="8" value="8*8 格" />
+        <input type="button" class="btn" data-val="9" value="9*9 格" />
+        <div class="time-used">
+            用时：
+<!--            <span class="time days"></span> 天-->
+            <span class="time hours"></span> 时
+            <span class="time min"></span> 分
+            <span class="time second"></span> 秒
+            <span class="time mss"></span> 毫秒
+        </div>
+        <table class="table" cellpadding="0" cellspacing="0" id="number-list">
+        </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
