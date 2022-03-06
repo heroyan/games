@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>扑克记牌器</title>
+    <style>
+        html {
+            background: linear-gradient(to bottom, #99c1ad91 0%,#88e794 100%);
+        }
+        .container {
+            width: 1024px;
+            margin: auto;
+        }
+        .card {
+            width: 90px;
+            height: 160px;
+            float: left;
+            border: 1px solid red;
+            border-radius: 10px;
+            margin: 10px;
+            position: relative;
+            color: red;
+            background: #1b7ab114;
+            cursor: pointer;
+        }
+        .card-left {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        .card-right {
+            position: absolute;
+            top: 130px;
+            left: 70px;
+        }
+        .left-num {
+            position: absolute;
+            top: 70px;
+            left: 35px;
+        }
+        input[type=button] {
+            cursor: pointer;
+        }
+        .card-left-area {
+            clear: both;
+        }
+        .card-display, .left-num-display {
+            width: 50px;
+            text-align: center;
+            margin-right: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <input type="button" id="btn1" value="一副牌" />
+        <input type="button" id="btn2" value="两幅牌" />
+        出牌：点击对应的牌，出几个点击几次
+        <div id="card-template"></div>
+        <div class="card-left-area">
+            <div class="card-list" id="card-list">
+            </div>
+            <div class="card-left-num" id="card-left-num">
+            </div>
+        </div>
+    </div>
+    <div id="one-card-template" style="display:none;">
+        <div class="card">
+            <div class="card-left"></div>
+            <div class="left-num"></div>
+            <div class="card-right"></div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
