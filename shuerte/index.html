@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <title>舒尔特方格</title>
     <style>
         html {
@@ -24,6 +25,11 @@
             height: 80px;
             text-align: center;
         }
+        td:active{ box-shadow: 0px 0px 50px #F60 inset; color:#fff; }
+        td:hover {
+            background: #6de991;
+            cursor: pointer;
+        }
         .time-used {
             margin: 10px;
         }
@@ -31,10 +37,12 @@
             display: inline-block;
             width: 30px;
         }
+        .tips {
+            margin: 10px;
+        }
     </style>
 </head>
 <body>
-
     <div class="container">
         <input type="button" class="btn" data-val="4" value="4*4 格" />
         <input type="button" class="btn" data-val="5" value="5*5 格" />
@@ -42,6 +50,9 @@
         <input type="button" class="btn" data-val="7" value="7*7 格" />
         <input type="button" class="btn" data-val="8" value="8*8 格" />
         <input type="button" class="btn" data-val="9" value="9*9 格" />
+        <div class="tips">
+            <label><input type="checkbox" id="if-disappear" checked> 点击后是否消失</label>
+        </div>
         <div class="time-used">
             用时：
 <!--            <span class="time days"></span> 天-->

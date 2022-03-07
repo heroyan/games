@@ -12,6 +12,8 @@ $(document).ready(function () {
     let curNum = 0
     let start = null
     let stop = false
+    // 点击后是否消失
+    let disappear = true
 
     const genRandNum = (randNum) => {
         const total = num*num
@@ -62,10 +64,17 @@ $(document).ready(function () {
                 return
             }
             curNum++
+            if(disappear) {
+                $(this).html("")
+            }
             if(curNum == num*num) {
                 stop = true
                 alert("恭喜你，完成啦！！！🎉🎉🎉")
             }
+        })
+
+        $("#if-disappear").change(function() {
+            disappear = $(this).prop("checked")
         })
     }
 
