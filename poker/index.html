@@ -6,7 +6,7 @@
     <title>扑克记牌器</title>
     <style>
         html {
-            background: linear-gradient(to bottom, #99c1ad91 0%,#88e794 100%);
+            background: #CCE8CF;
         }
         .container {
             width: 600px;
@@ -48,29 +48,21 @@
             cursor: pointer;
             height: 50px;
         }
-        .card-left-area {
-            clear: both;
-        }
-        .card-display, .left-num-display {
-            width: 50px;
+        .tips, .btn-area {
+            width: 600px;
+            margin: auto;
             text-align: center;
-            margin-right: 10px;
-            display: inline-block;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <input type="button" id="btn1" value="一副牌" />
-        <input type="button" id="btn2" value="两幅牌" />
-        出牌：点击对应的牌，出几个点击几次
+        <div class="tips">出牌：点击对应的牌，出几个点击几次</div>
         <div id="card-template"></div>
-        <div class="card-left-area">
-            <div class="card-list" id="card-list">
-            </div>
-            <div class="card-left-num" id="card-left-num">
-            </div>
+        <div class="btn-area">
+            <input type="button" id="btn1" value="一副牌" />
+            <input type="button" id="btn2" value="两幅牌" />
         </div>
     </div>
     <div id="one-card-template" style="display:none;">
