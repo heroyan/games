@@ -77,7 +77,8 @@ $(document).ready(function () {
                 global_wrong_num += 1
                 $("#wrong-num").html(global_wrong_num)
                 alert("答案错误哦😯")
-                $("#num" + global_hide).html("")
+                global_input = ''
+                $("#num" + global_hide).html(global_input)
             }
 
         })
