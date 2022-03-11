@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">-->
     <title>数字华容道</title>
     <style>
         html {
@@ -34,6 +34,7 @@
             line-height: 90px;
             font-size: 40px;
             color: brown;
+            cursor: pointer;
         }
         .tips {
             color: white;
@@ -43,15 +44,16 @@
 <body>
     <div id="container">
         <div class="btn-area">
-            <input type="button" value="3*3格" onclick="genTable(3)"/>
-            <input type="button" value="4*4格" onclick="genTable(4)"/>
-            <input type="button" value="5*5格" onclick="genTable(5)"/>
-            <input type="button" value="6*6格" onclick="genTable(6)"/>
-            <input type="button" value="7*7格" onclick="genTable(7)"/>
-            <input type="button" value="8*8格" onclick="genTable(8)"/>
-            <input type="button" value="9*9格" onclick="genTable(9)"/>
+            <input type="button" value="3*3格" data-val="3" class="set-grid-num-btn"/>
+            <input type="button" value="4*4格" data-val="4" class="set-grid-num-btn"/>
+            <input type="button" value="5*5格" data-val="5" class="set-grid-num-btn"/>
+            <input type="button" value="6*6格" data-val="6" class="set-grid-num-btn"/>
+            <input type="button" value="7*7格" data-val="7" class="set-grid-num-btn"/>
+            <input type="button" value="8*8格" data-val="8" class="set-grid-num-btn"/>
+            <input type="button" value="9*9格" data-val="9" class="set-grid-num-btn"/>
             <div class="tips">
-                ↑：空白格往上走  ↓： 空白格往下走 ←：空白格往左走 →：空白格往右走
+                ↑：空白格往上走  ↓： 空白格往下走 ←：空白格往左走 →：空白格往右走 <br/>
+                或者直接点击要移动的数字
             </div>
         </div>
 
@@ -59,6 +61,7 @@
         </div>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="index.js"></script>
 </body>
 </html>
