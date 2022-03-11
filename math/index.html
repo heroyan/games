@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>数学加减法</title>
+    <style>
+        html {
+            background: #CCE8CF;
+        }
+        #container {
+            margin: auto;
+            width: 600px;
+            text-align: center;
+        }
+        .btn-area {
+            margin: auto;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .one {
+            float: left;
+            width: 90px;
+            height: 90px;
+            border: 1px brown solid;
+            margin: 10px;
+            text-align: center;
+            background: beige;
+            border-radius: 10px;
+            line-height: 90px;
+            font-size: 40px;
+            color: brown;
+        }
+        .number {
+            float: left;
+            width: 30px;
+            height: 30px;
+            border: 1px brown solid;
+            margin: 10px;
+            text-align: center;
+            background: beige;
+            border-radius: 5px;
+            line-height: 30px;
+            font-size: 20px;
+            color: brown;
+        }
+        .number:active{ box-shadow: 0px 0px 50px #F60 inset; color:#fff; }
+        .number:hover {
+            background: #6de991;
+            cursor: pointer;
+        }
+        .result {
+            margin: 10px;
+        }
+        .right {
+            font-size: 30px;
+            color: green;
+        }
+        .wrong {
+            font-size: 30px;
+            color: red;
+            margin-left: 30px;
+        }
+        .submit-area {
+            clear: both;
+        }
+        .submit-btn {
+            width: 100px;
+            height: 30px;
+        }
+        .answer-grid {
+            background: #d1dce5;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="btn-area">
+            <input type="button" value="10以内加减法" data-val="10" class="btn"/>
+            <input type="button" value="20以内加减法" data-val="20" class="btn"/>
+            <input type="button" value="100以内加减法" data-val="100" class="btn"/>
+        </div>
+
+        <div class="result">
+            <span class="right"> √: <span id="right-num">0</span></span>
+            <span class="wrong"> ×: <span id="wrong-num">0</span></span>
+        </div>
+
+        <div id="math-area">
+            <a class="one" id="num1"></a>
+            <a class="one" id="method"></a>
+            <a class="one" id="num2"></a>
+            <a class="one" id="equal">=</a>
+            <a class="one" id="num3"></a>
+        </div>
+
+        <div class="number-template">
+            <div class="number">0</div>
+            <div class="number">1</div>
+            <div class="number">2</div>
+            <div class="number">3</div>
+            <div class="number">4</div>
+            <div class="number">5</div>
+            <div class="number">6</div>
+            <div class="number">7</div>
+            <div class="number">8</div>
+            <div class="number">9</div>
+        </div>
+
+        <div class="submit-area">
+            <input type="button" value="确 定" data-val="100" id="submit-btn" class="submit-btn"/>
+            <input type="button" value="清 除 答 案" data-val="100" id="clear-btn" class="submit-btn"/>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
