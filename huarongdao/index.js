@@ -198,6 +198,9 @@ $(document).ready(function () {
                 checkFinished()
             }
         })
+        $(".reset-btn").unbind("click").click(function(){
+            genTable(global_num)
+        })
     }
     // ---------------MAIN---------------
     // 默认展示 4*4 格

@@ -17,6 +17,8 @@ $(document).ready(function () {
     var global_right_num = 0
     var global_wrong_num = 0
     var global_start = null
+    var global_top = 0
+    var global_times = 0
 
     function genTable(num) {
         global_max = num
@@ -27,6 +29,7 @@ $(document).ready(function () {
         // decide the method
         // decide num1
         // decide the number
+        $("#bonus").hide()
         global_input = ''
 
         global_method = [-1, 1][Math.floor(Math.random() * 2)]
@@ -59,7 +62,31 @@ $(document).ready(function () {
         $("#num" + global_hide).addClass("answer-grid")
         global_answer = [0, global_num1, global_num2, global_num3][global_hide]
 
+        global_top = $("#num1").offset().top
+        global_times = 0
+
         global_start = new Date()
+    }
+
+    // show animation when the answer is wrong
+    const wrongTips = () => {
+        let obj = $("#num" + global_hide)
+        let offset = obj.offset()
+        if(global_times > 5) {
+            global_times = 0
+            // 复位
+            obj.offset({top: global_top, left: offset.left})
+            return
+        }
+        if(offset.top > global_top) {
+            obj.offset({top: global_top - 10, left: offset.left})
+        } else {
+            obj.offset({top: global_top + 10, left: offset.left})
+        }
+        setTimeout(function(){
+            global_times++
+            wrongTips()
+        }, 100)
     }
 
     const bindClick = () => {
@@ -71,12 +98,15 @@ $(document).ready(function () {
         $("#submit-btn").unbind("click").click(function(){
             if(global_answer == parseInt(global_input)) {
                 global_right_num += 1
-                randCalc()
                 $("#right-num").html(global_right_num)
+                $("#bonus").show(500, function(){
+                    randCalc()
+                })
             } else {
                 global_wrong_num += 1
                 $("#wrong-num").html(global_wrong_num)
-                alert("答案错误哦😫😫😫😫😫😫")
+//                alert("答案错误哦😫😫😫😫😫😫")
+                wrongTips()
                 global_input = ''
                 $("#num" + global_hide).html(global_input)
             }

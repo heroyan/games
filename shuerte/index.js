@@ -60,7 +60,7 @@ $(document).ready(function () {
         $("#number-list").on("click", "td", function(){
             let v = parseInt($(this).html())
             if(v != (curNum+1)) {
-                alert("请先点击 " + (curNum+1))
+                alert("请点击 " + (curNum+1))
                 return
             }
             curNum++
@@ -75,6 +75,10 @@ $(document).ready(function () {
 
         $("#if-disappear").change(function() {
             disappear = $(this).prop("checked")
+        })
+
+        $(".reset-btn").unbind("click").click(function(){
+            initTable()
         })
     }
 

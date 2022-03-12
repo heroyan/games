@@ -10,7 +10,7 @@
         }
         #container {
             margin: auto;
-            width: 600px;
+            width: 650px;
             text-align: center;
         }
         .btn-area {
@@ -30,17 +30,28 @@
             line-height: 90px;
             font-size: 40px;
             color: brown;
+            overflow: hidden;
+        }
+        #bonus {
+            border: none;
+            background: none;
+            width: 30px;
+            color: green;
+            display: none;
+        }
+        .number-template {
+            clear: both;
         }
         .number {
             float: left;
-            width: 50px;
-            height: 50px;
+            width: 90px;
+            height: 90px;
             border: 1px brown solid;
             margin: 10px;
             text-align: center;
             background: beige;
             border-radius: 5px;
-            line-height: 50px;
+            line-height: 90px;
             font-size: 20px;
             color: brown;
         }
@@ -64,7 +75,7 @@
         .submit-area {
             clear: both;
         }
-        .submit-btn {
+        .submit-btn, .btn {
             width: 100px;
             height: 50px;
             margin-right: 50px;
@@ -83,7 +94,7 @@
         </div>
 
         <div class="result">
-            <span class="right"> √: <span id="right-num">0</span></span>
+            <span class="right"> ✓: <span id="right-num">0</span></span>
             <span class="wrong"> ×: <span id="wrong-num">0</span></span>
         </div>
 
@@ -93,6 +104,7 @@
             <a class="one" id="num2"></a>
             <a class="one" id="equal">=</a>
             <a class="one" id="num3"></a>
+            <a class="one" id="bonus">✓</a>
         </div>
 
         <div class="number-template">

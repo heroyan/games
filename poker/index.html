@@ -12,6 +12,9 @@
             width: 600px;
             margin: auto;
         }
+        .set-num-btn {
+            margin-left: 30px;
+        }
         .card {
             width: 90px;
             height: 160px;
@@ -61,8 +64,8 @@
         <div class="tips">出牌：点击对应的牌，出几个点击几次</div>
         <div id="card-template"></div>
         <div class="btn-area">
-            <input type="button" id="btn1" value="一副牌" />
-            <input type="button" id="btn2" value="两幅牌" />
+            <input type="button" class="set-num-btn" data-val="1" value="一副牌" />
+            <input type="button" class="set-num-btn" data-val="2" value="两幅牌" />
         </div>
     </div>
     <div id="one-card-template" style="display:none;">
