@@ -76,6 +76,9 @@ $(document).ready(function () {
             updateLeftNum(v)
             console.log(pokerLeft)
         })
+        $(".set-num-btn").unbind("click").click(function(){
+            initLeft(parseInt($(this).attr("data-val")))
+        })
     }
     // ---------------MAIN---------------
     initPoker()
