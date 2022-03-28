@@ -8,16 +8,19 @@
 $(document).ready(function () {
     let pokerLeft = {}
     let pokerArr = {}
-    pokerArr[1] = 'A'
+    let maxNum = 18
+    let start = 3
     pokerArr[11] = 'J'
     pokerArr[12] = 'Q'
     pokerArr[13] = 'K'
-    pokerArr[14] = 'JOKER'
-    pokerArr[15] = 'JOKER'
+    pokerArr[14] = 'A'
+    pokerArr[15] = '2'
+    pokerArr[16] = 'JOKER'
+    pokerArr[17] = 'JOKER'
 
     const initLeft = (num) => {
-        for(let i = 1; i < 16; i++) {
-            if(i > 13) {
+        for(let i = 1; i < maxNum; i++) {
+            if(i > maxNum - 3) {
                 pokerLeft[i] = num
             } else {
                 pokerLeft[i] = 4 * num
@@ -27,15 +30,15 @@ $(document).ready(function () {
     }
 
     const initPoker = () => {
-        for(let i = 1; i < 16; i++) {
+        for(let i = start; i < maxNum; i++) {
             let one = $("#one-card-template").html()
             one = $(one)
             one.attr("data-val", i)
             let display = pokerArr[i] || i
-            if( i == 14) {
+            if( i == 16) {
                 one.find(".card-left").html(display)
                 one.find(".card-left").css("color", "gray")
-            } else if(i == 15) {
+            } else if(i == 17) {
                 one.find(".card-left").html(display)
                 one.find(".card-left").css("color", "red")
             } else {
@@ -52,7 +55,7 @@ $(document).ready(function () {
     }
 
     const initLeftNum = () => {
-        for(let i = 1; i < 16; i++) {
+        for(let i = start; i < maxNum; i++) {
             $(".card[data-val=" + i + "]").find(".left-num").html(pokerLeft[i])
         }
     }
